@@ -1,1 +1,3 @@
-# this is the basic react project from scratch
+# CraveCart - a food orderiung web app..
+
+- This project contains a list of restaurants from where food can be ordered
