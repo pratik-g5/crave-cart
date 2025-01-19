@@ -1,3 +1,3 @@
-# CraveCart - a food orderiung web app..
+# CraveCart - a food ordering web app..
 
-- This project contains a list of restaurants from where food can be ordered
+- This project contains the list of restaurants from where food can be ordered
