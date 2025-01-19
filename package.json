@@ -1,0 +1,32 @@
+{
+  "name": "react-project-2",
+  "version": "1.0.0",
+  "description": "This is the project built from scratch laying the foundation to learning react ",
+  "keywords": [
+    "laying",
+    "foundation",
+    "parcel",
+    "react"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "react-project-2"
+  },
+  "license": "ISC",
+  "author": "Pratik G",
+  "type": "commonjs",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
