@@ -13,7 +13,11 @@ const resList = [
           "Tibetan",
           "Desserts"
         ],
-        "avgRating": 4.4,
+        "avgRating": 3.4
+        
+        
+        
+        ,
         "parentId": "61955",
         "avgRatingString": "4.4",
         "totalRatingsString": "1.2K+",
@@ -105,16 +109,7 @@ const resList = [
           "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
         },
         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-      },
-      "analytics": {
-        "context": "seo-data-7da9750b-d515-4d85-8cb0-2ac62d802384"
-      },
-      "cta": {
-        "link": "https://www.swiggy.com/city/bangalore/chinese-wok-malleshwaram-rest405798",
-        "text": "RESTAURANT_MENU",
-        "type": "WEBLINK"
-      },
-      "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+      }
     },
     {
       "info": {
@@ -208,16 +203,7 @@ const resList = [
           "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
         },
         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-      },
-      "analytics": {
-        "context": "seo-data-7da9750b-d515-4d85-8cb0-2ac62d802384"
-      },
-      "cta": {
-        "link": "https://www.swiggy.com/city/bangalore/pizza-hut-richmond-town-shanti-nagar-rest10575",
-        "text": "RESTAURANT_MENU",
-        "type": "WEBLINK"
-      },
-      "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+      }
     },
     {
       "info": {
@@ -233,7 +219,7 @@ const resList = [
           "wrap",
           "Healthy Food"
         ],
-        "avgRating": 4.3,
+        "avgRating": 4.0,
         "parentId": "2",
         "avgRatingString": "4.3",
         "totalRatingsString": "3.7K+",
@@ -325,16 +311,7 @@ const resList = [
           "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
         },
         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-      },
-      "analytics": {
-        "context": "seo-data-7da9750b-d515-4d85-8cb0-2ac62d802384"
-      },
-      "cta": {
-        "link": "https://www.swiggy.com/city/bangalore/subway-ub-city-vittal-mallya-road-rest69876",
-        "text": "RESTAURANT_MENU",
-        "type": "WEBLINK"
-      },
-      "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+      }
     },
     {
       "info": {
@@ -442,16 +419,7 @@ const resList = [
           "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
         },
         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-      },
-      "analytics": {
-        "context": "seo-data-7da9750b-d515-4d85-8cb0-2ac62d802384"
-      },
-      "cta": {
-        "link": "https://www.swiggy.com/city/bangalore/dominos-pizza-mg-road-brigade-road-rest23847",
-        "text": "RESTAURANT_MENU",
-        "type": "WEBLINK"
-      },
-      "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+      }
     },
     {
       "info": {
@@ -471,7 +439,7 @@ const resList = [
           "Indian",
           "Desserts"
         ],
-        "avgRating": 4.4,
+        "avgRating": 3.5,
         "parentId": "398",
         "avgRatingString": "4.4",
         "totalRatingsString": "59K+",
@@ -563,16 +531,7 @@ const resList = [
           }
         },
         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-      },
-      "analytics": {
-        "context": "seo-data-7da9750b-d515-4d85-8cb0-2ac62d802384"
-      },
-      "cta": {
-        "link": "https://www.swiggy.com/city/bangalore/freshmenu-johnson-market-richmond-road-rest6924",
-        "text": "RESTAURANT_MENU",
-        "type": "WEBLINK"
-      },
-      "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+      }
     },
     {
       "info": {
@@ -664,16 +623,7 @@ const resList = [
           }
         },
         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-      },
-      "analytics": {
-        "context": "seo-data-7da9750b-d515-4d85-8cb0-2ac62d802384"
-      },
-      "cta": {
-        "link": "https://www.swiggy.com/city/bangalore/baskin-robbins-ice-cream-desserts-centre-point-residency-road-rest810943",
-        "text": "RESTAURANT_MENU",
-        "type": "WEBLINK"
-      },
-      "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+      }
     },
     {
       "info": {
@@ -695,7 +645,7 @@ const resList = [
           "Snacks",
           "Desserts"
         ],
-        "avgRating": 4.3,
+        "avgRating": 3.2,
         "parentId": "301197",
         "avgRatingString": "4.3",
         "totalRatingsString": "661",
@@ -787,16 +737,7 @@ const resList = [
           }
         },
         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-      },
-      "analytics": {
-        "context": "seo-data-7da9750b-d515-4d85-8cb0-2ac62d802384"
-      },
-      "cta": {
-        "link": "https://www.swiggy.com/city/bangalore/home-plate-by-eatfit-vasantha-nagar-cunningham-road-rest440151",
-        "text": "RESTAURANT_MENU",
-        "type": "WEBLINK"
-      },
-      "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+      }
     },
     {
       "info": {
@@ -811,7 +752,7 @@ const resList = [
           "Biryani",
           "South Indian"
         ],
-        "avgRating": 4.6,
+        "avgRating": 4.3,
         "parentId": "10496",
         "avgRatingString": "4.6",
         "totalRatingsString": "2.5K+",
@@ -899,16 +840,7 @@ const resList = [
           }
         },
         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-      },
-      "analytics": {
-        "context": "seo-data-7da9750b-d515-4d85-8cb0-2ac62d802384"
-      },
-      "cta": {
-        "link": "https://www.swiggy.com/city/bangalore/andhra-gunpowder-shivananda-circle-seshadripuram-rest502957",
-        "text": "RESTAURANT_MENU",
-        "type": "WEBLINK"
-      },
-      "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+      }
     }
   ]
 

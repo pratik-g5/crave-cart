@@ -97,3 +97,7 @@
     margin: 20px;
     border:1px solid rgb(159, 159, 159);
 }
+
+#filter {
+    padding:20px;
+}
