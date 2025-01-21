@@ -1,46 +1,84 @@
-
-import RestCards from "./RestaurantCards";
-import { useState, useEffect } from "react";
+import RestCards from './RestaurantCards';
+import { useState, useEffect } from 'react';
+import { SWIGGY_FETCH_DATA } from '../utils/constants';
+import Shimmer from '../Shimmer';
 
 const Body = () => {
+  const [restaurantList, setRestaurantList] = useState([]);
 
-    let arr = useState([]);
-    const [restaurantList, setRestaurantList] = arr;
+  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
-    useEffect( () => {
-        fetchData();
-    }
-    ,[]);
+  const [searchItem, setSearchItem] = useState('');
 
-    const fetchData = async () => {  
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-       
-        const json = await data.json();
+  useEffect(() => {
+    fetchData();
+  }, []);
 
-        const restaurants = json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants;
+  const fetchData = async () => {
+    const data = await fetch(SWIGGY_FETCH_DATA);
 
-        setRestaurantList(restaurants);
-    }
+    const json = await data.json();
 
-    return (
-        <div id="body">
-            <div id="filter">
-                <button id="top-rate" onClick={() => { 
-                    const filteredList = restaurantList.filter(
-                        (res) => res.info.avgRating > 4
-                    );
-                    setRestaurantList(filteredList);
-                }}>Top Rated Restaurants</button>
-            </div>
-            <div id="rest-container">
-                {restaurantList.map((restaurant) => (
-                    <RestCards key={restaurant.info.id} resData={restaurant}/>
-                ))};
-            
-            </div>
+    const restaurants =
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants;
+
+    setRestaurantList(restaurants);
+
+    setFilteredRestaurants(restaurants);
+  };
+
+  return restaurantList.length === 0 ? (
+    <Shimmer />
+  ) : (
+    <div id="body">
+      <div id="filter">
+        <div id="search-items">
+          <input
+            type="text"
+            id="search"
+            placeholder="Search Restaurants"
+            value={searchItem}
+            onChange={(e) => {
+              setSearchItem(e.target.value);
+            }}
+          />
+          <button
+            id="search-btn"
+            onClick={() => {
+              console.log(searchItem);
+              const filteredRestaurants = restaurantList.filter((res) =>
+                res.info.name.toLowerCase().includes(searchItem.toLowerCase())
+              );
+
+              setFilteredRestaurants(filteredRestaurants);
+            }}
+          >
+            Search
+          </button>
         </div>
-
-    )
-}
+        <button
+          id="top-rate"
+          onClick={() => {
+            const filteredList = filteredRestaurants.filter(
+              (res) => res.info.avgRating > 4.2
+            );
+            setFilteredRestaurants(filteredList);
+          }}
+        >
+          Top Rated Restaurants
+        </button>
+      </div>
+      <div id="rest-container">
+        {filteredRestaurants.map((restaurant) => (
+          <RestCards
+            key={restaurant.info.id}
+            resData={restaurant}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default Body;

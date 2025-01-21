@@ -1,18 +1,19 @@
 .header {
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
+     border-bottom: 1px solid black;
 }
 
 .navItems {
     display: flex;
     align-items: center;
+    justify-content:center;
 }
 .navItems > ul {
     display: flex;
     font-size: large;
     width: 100%;
-    margin: 20px;
+    
     flex-direction: row;
     cursor: pointer;
 }
@@ -22,7 +23,7 @@
     margin-right: 30px;
 }
 
-#icon {
+#login {
     margin-right: 30px;
 }
 
@@ -32,32 +33,12 @@
     padding: 10px;
 }
 
-#search {
-    display: flex;
-    justify-content: center;
-    max-width: 200px; 
-    width: 100%;
-    height: 30px;
-}
-
-#searchBar {
-    width: 100%;
-
-}
 
 #userIcon {
     margin-right: 20px;
 }
 
 
-#search {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 20px;
-
-}
 
 #logo1{
     height:150px;
@@ -95,9 +76,36 @@
     display: flex;
     flex-wrap: wrap;
     margin: 20px;
-    border:1px solid rgb(159, 159, 159);
 }
 
 #filter {
     padding:20px;
+}
+
+.shimmer {
+        width: 200px;
+        height: 300px;
+        background-color: #f3f3f3; 
+        margin-left: 20px;
+        margin-top: 20px;
+        display: flex;
+        padding: 20px;
+}
+
+.shimmer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content:flex-start; */
+    margin: 40px;
+    flex-direction: row;
+    margin-top:60px;
+}
+
+#filter {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#top-rate {
+    margin-left: 30px;
 }
