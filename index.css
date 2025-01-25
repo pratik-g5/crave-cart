@@ -38,6 +38,10 @@
     margin-right: 20px;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 
 #logo1{
@@ -108,4 +112,14 @@
 
 #top-rate {
     margin-left: 30px;
+    cursor: pointer;
+}
+
+#search-btn{
+    cursor: pointer;
+}
+
+
+#login{
+    cursor: pointer;
 }
