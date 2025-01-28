@@ -7,21 +7,22 @@ const Header = () => {
 
   return (
     <div className="header">
-      <img
-        id="logo"
-        src={image}
-      />
+      <Link to="/">
+        {' '}
+        <img
+          id="logo"
+          src={image}
+        />{' '}
+      </Link>
       <div className="navItems">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/contact">Contact Us</Link>
           </li>
           <li>
             <Link to="/about">About</Link>
           </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
+          <li>Cart</li>
           <button
             id="login"
             onClick={() =>

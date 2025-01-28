@@ -23,7 +23,6 @@ const Body = () => {
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants;
 
-    console.log(restaurants);
     setRestaurantList(restaurants);
 
     setFilteredRestaurants(restaurants);
@@ -62,7 +61,7 @@ const Body = () => {
           id="top-rate"
           onClick={() => {
             const filteredList = filteredRestaurants.filter(
-              (res) => res.info.avgRating > 4.2
+              (res) => res.info.avgRating > 4.5
             );
             setFilteredRestaurants(filteredList);
           }}

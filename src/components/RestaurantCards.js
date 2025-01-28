@@ -15,11 +15,11 @@ const RestCards = (props) => {
             id="logo1"
             src={CDN_URL + cloudinaryImageId}
           />
-          <h3>{name}</h3>
+          <h4>{name}</h4>
           <h5>{cuisines.join(', ')}</h5>
-          <h5>{avgRating}</h5>
+          <h5>{avgRating} ⭐</h5>
           <h5>{costForTwo}</h5>
-        </div>{' '}
+        </div>
       </Link>
     </div>
   );
