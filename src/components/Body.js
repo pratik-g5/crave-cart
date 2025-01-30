@@ -2,6 +2,7 @@ import RestCards from './RestaurantCards';
 import { useState, useEffect } from 'react';
 import { SWIGGY_FETCH_DATA } from '../utils/constants';
 import Shimmer from '../Shimmer';
+import useOnlineStatus from '../utils/useOnlineStatus';
 
 const Body = () => {
   const [restaurantList, setRestaurantList] = useState([]);
@@ -9,6 +10,8 @@ const Body = () => {
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
   const [searchItem, setSearchItem] = useState('');
+
+  const isOnline = useOnlineStatus();
 
   useEffect(() => {
     fetchData();
@@ -28,6 +31,8 @@ const Body = () => {
     setFilteredRestaurants(restaurants);
   };
 
+  if (isOnline === false) return <h1>You are offline!</h1>;
+
   return restaurantList.length === 0 ? (
     <Shimmer />
   ) : (
@@ -46,7 +51,6 @@ const Body = () => {
           <button
             id="search-btn"
             onClick={() => {
-              console.log(searchItem);
               const filteredRestaurants = restaurantList.filter((res) =>
                 res.info.name.toLowerCase().includes(searchItem.toLowerCase())
               );

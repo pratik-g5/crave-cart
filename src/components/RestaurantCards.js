@@ -6,7 +6,6 @@ const RestCards = (props) => {
   const { id, name, cuisines, avgRating, costForTwo, cloudinaryImageId } =
     resData?.info;
 
-  console.log(resData?.info);
   return (
     <div id="rest-cards">
       <Link to={'/restaurants/' + id}>
@@ -16,7 +15,7 @@ const RestCards = (props) => {
             src={CDN_URL + cloudinaryImageId}
           />
           <h4>{name}</h4>
-          <h5>{cuisines.join(', ')}</h5>
+          <h6>{cuisines.join(', ')}</h6>
           <h5>{avgRating} ⭐</h5>
           <h5>{costForTwo}</h5>
         </div>
