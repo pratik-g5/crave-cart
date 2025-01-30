@@ -142,6 +142,11 @@ h6 {
 #user-class {
   padding: 10px;
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  border-radius: 16px;
+  margin-top: 50px;
 }
 
 .menu-container {
@@ -244,11 +249,10 @@ h6 {
   margin-right: 30px;
 }
 
-#counter {
-  width: 100px;
-  cursor: pointer;
-}
-
 #online {
   font-size: x-small;
+}
+
+#span {
+  margin-bottom: 20px;
 }

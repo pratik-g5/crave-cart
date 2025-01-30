@@ -8,7 +8,6 @@ const Header = () => {
 
   const [btnName, setBtnName] = useState('login');
 
-  const [count, setCount] = useState(0);
   return (
     <div className="header">
       <Link to="/">
@@ -20,17 +19,7 @@ const Header = () => {
       </Link>
 
       <div className="navItems">
-        {/* <button
-          id="counter"
-          onClick={() => {
-            setCount(count + 1);
-          }}
-        >
-          {count}
-        </button> */}
-
         <ul>
-          {/* <li>{isOnline ? <span>🛜</span> : <del>🛜</del>}</li> */}
           <li id="online">Online Status: {isOnline ? '🟢' : '🔴'}</li>
           <li>
             <Link to="/contact">Contact Us</Link>
