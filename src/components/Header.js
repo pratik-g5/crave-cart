@@ -9,27 +9,28 @@ const Header = () => {
   const [btnName, setBtnName] = useState('login');
 
   return (
-    <div className="header">
-      <Link to="/">
-        {' '}
-        <img
-          id="logo"
-          src={image}
-        />{' '}
-      </Link>
+    <div className="flex justify-between items-center border-b-1 shadow-sm">
+      <div className="">
+        <Link to="/">
+          <img
+            className="w-24 ml-2 p-3 "
+            src={image}
+          />
+        </Link>
+      </div>
 
-      <div className="navItems">
-        <ul>
-          <li id="online">Online Status: {isOnline ? '🟢' : '🔴'}</li>
-          <li>
-            <Link to="/contact">Contact Us</Link>
+      <div className="flex ">
+        <ul className="flex">
+          <li className="px-4">Online Status: {isOnline ? '🟢' : '🔴'}</li>
+          <li className="px-4">
+            <Link to="/contact">📞Contact Us</Link>
           </li>
-          <li>
-            <Link to="/about">About</Link>
+          <li className="px-4">
+            <Link to="/about">ℹ️ About</Link>
           </li>
-          <li>Cart</li>
+          <li className="px-4">🛒Cart</li>
           <button
-            id="login"
+            className="px-4 mr-3 text-inherit	border rounded-md bg-gray-600 cursor-pointer"
             onClick={() =>
               btnName === 'login' ? setBtnName('logout') : setBtnName('login')
             }

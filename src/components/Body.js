@@ -36,33 +36,32 @@ const Body = () => {
   return restaurantList.length === 0 ? (
     <Shimmer />
   ) : (
-    <div id="body">
-      <div id="filter">
-        <div id="search-items">
-          <input
-            type="text"
-            id="search"
-            placeholder="Search Restaurants"
-            value={searchItem}
-            onChange={(e) => {
-              setSearchItem(e.target.value);
-            }}
-          />
-          <button
-            id="search-btn"
-            onClick={() => {
-              const filteredRestaurants = restaurantList.filter((res) =>
-                res.info.name.toLowerCase().includes(searchItem.toLowerCase())
-              );
-
-              setFilteredRestaurants(filteredRestaurants);
-            }}
-          >
-            Search
-          </button>
-        </div>
+    <div className="p-4 m-4">
+      <div className="p-2 ml-20 flex">
+        <input
+          type="text"
+          className=" mr-2 border rounded-sm"
+          placeholder="Search Restaurants"
+          value={searchItem}
+          onChange={(e) => {
+            setSearchItem(e.target.value);
+          }}
+        />
         <button
-          id="top-rate"
+          className="px-3 border-black cursor-pointer rounded-md bg-gray-300"
+          onClick={() => {
+            const filteredRestaurants = restaurantList.filter((res) =>
+              res.info.name.toLowerCase().includes(searchItem.toLowerCase())
+            );
+
+            setFilteredRestaurants(filteredRestaurants);
+          }}
+        >
+          Search
+        </button>
+
+        <button
+          className="px-4 ml-6 border cursor-pointer rounded-md bg-blue-200 items-stretch"
           onClick={() => {
             const filteredList = filteredRestaurants.filter(
               (res) => res.info.avgRating > 4.5
@@ -73,7 +72,7 @@ const Body = () => {
           Top Rated Restaurants
         </button>
       </div>
-      <div id="rest-container">
+      <div className="p-5 flex flex-wrap justify-center">
         {filteredRestaurants.map((restaurant) => (
           <RestCards
             key={restaurant.info.id}
