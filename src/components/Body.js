@@ -1,4 +1,4 @@
-import RestCards from './RestaurantCards';
+import RestaurantCards, { DiscountLabel } from './RestaurantCards';
 import { useState, useEffect } from 'react';
 import { SWIGGY_FETCH_DATA } from '../utils/constants';
 import Shimmer from '../Shimmer';
@@ -12,6 +12,8 @@ const Body = () => {
   const [searchItem, setSearchItem] = useState('');
 
   const isOnline = useOnlineStatus();
+
+  const LabeledRestaurantCard = DiscountLabel(RestaurantCards);
 
   useEffect(() => {
     fetchData();
@@ -32,6 +34,8 @@ const Body = () => {
   };
 
   if (isOnline === false) return <h1>You are offline!</h1>;
+
+  // console.log(filteredRestaurants);
 
   return restaurantList.length === 0 ? (
     <Shimmer />
@@ -73,12 +77,19 @@ const Body = () => {
         </button>
       </div>
       <div className="p-5 flex flex-wrap justify-center">
-        {filteredRestaurants.map((restaurant) => (
-          <RestCards
-            key={restaurant.info.id}
-            resData={restaurant}
-          />
-        ))}
+        {filteredRestaurants.map((restaurant) =>
+          restaurant?.info?.aggregatedDiscountInfoV3 ? (
+            <LabeledRestaurantCard
+              key={restaurant.info.id}
+              resData={restaurant}
+            />
+          ) : (
+            <RestaurantCards
+              key={restaurant.info.id}
+              resData={restaurant}
+            />
+          )
+        )}
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { MENU_URL1, MENU_URL2 } from './constants';
 
 const useRestaurantMenu = (resId) => {
-  const [resInfo, setResInfo] = useState(null);
+  const [restaurantData, setRestaurantData] = useState(null);
 
   useEffect(() => {
     fetchData();
@@ -12,10 +12,11 @@ const useRestaurantMenu = (resId) => {
     const data = await fetch(MENU_URL1 + resId + MENU_URL2);
 
     const json = await data.json();
-    setResInfo(json);
+
+    setRestaurantData(json);
   };
 
-  return resInfo;
+  return restaurantData;
 };
 
 export default useRestaurantMenu;

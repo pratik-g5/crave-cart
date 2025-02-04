@@ -9,7 +9,7 @@ const Header = () => {
   const [btnName, setBtnName] = useState('login');
 
   return (
-    <div className="flex justify-between items-center border-b-1 shadow-sm">
+    <div className="flex justify-between items-center border-b-1 shadow-lg bg-slate-100 ">
       <div className="">
         <Link to="/">
           <img
