@@ -2,22 +2,19 @@ import { useParams } from 'react-router-dom';
 import useRestaurantMenu from '../utils/useRestaurantMenu';
 import RestaurantCategory from './RestaurantCategory';
 import Shimmer from '../Shimmer';
+import { useState } from 'react';
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
 
   const resMenuData = useRestaurantMenu(resId);
 
-  if (resMenuData === null) return <Shimmer />;
+  const [showIndex, setShowIndex] = useState(0);
 
-  // console.log(resMenuData?.data?.cards[2]?.card?.card?.info);
+  if (resMenuData === null) return <Shimmer />;
 
   const { name, avgRating, costForTwoMessage } =
     resMenuData?.data?.cards[2]?.card?.card?.info;
-
-  // console.log(
-  //   resMenuData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards
-  // );
 
   const menuCategories =
     resMenuData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
@@ -28,11 +25,6 @@ const RestaurantMenu = () => {
           'type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory'
     );
 
-  // console.log(menuCategories);
-  // menuCategories.map((category) => {
-  //   console.log(category?.card?.card?.title);
-  // });
-
   return (
     <div className="m-4 p-4 text-center">
       <h1 className="font-bold text-xl">{name}</h1>
@@ -41,10 +33,17 @@ const RestaurantMenu = () => {
         ☆ {avgRating} • {costForTwoMessage}{' '}
       </p>
       <div className=" m-4 p-4 flex items-center flex-col">
-        {menuCategories.map((category) => (
+        {menuCategories.map((category, index) => (
           <RestaurantCategory
             key={category?.card?.card?.categoryId}
             data={category}
+            showItems={
+              category?.card?.card?.categories ||
+              (index === showIndex ? true : false)
+            }
+            setShowIndex={() =>
+              setShowIndex((showIndex) => (showIndex === index ? null : index))
+            }
           />
         ))}
       </div>

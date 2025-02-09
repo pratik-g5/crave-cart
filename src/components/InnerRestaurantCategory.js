@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import InnerItemList from './InnerItemList';
-import InnerItem2 from './InnerItem2';
 
 const InnerRestaurantCategory = ({ categories }) => {
   // Store expanded state for each category by ID

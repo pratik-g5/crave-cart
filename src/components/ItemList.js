@@ -30,14 +30,19 @@ const ItemList = ({ list }) => {
                   {item?.card?.info?.description}
                 </p>
               </div>
-              {item?.card?.info?.imageId ? (
-                <img
-                  className="w-32 h-32 py-2 rounded-lg"
-                  src={CDN_URL + item?.card?.info?.imageId}
-                />
-              ) : (
-                <span className="w-32 h-32"> </span>
-              )}
+              <div className="relative">
+                <label className="absolute ml-9  bg-black bg-opacity-80 text-white px-3 mt-24 rounded-md cursor-pointer">
+                  Add +
+                </label>
+                {item?.card?.info?.imageId ? (
+                  <img
+                    className="w-32 h-32 py-2 rounded-lg"
+                    src={CDN_URL + item?.card?.info?.imageId}
+                  />
+                ) : (
+                  <span className="w-32 h-32"> </span>
+                )}
+              </div>
             </div>
           ))}
         </div>

@@ -11,6 +11,8 @@ const Body = () => {
 
   const [searchItem, setSearchItem] = useState('');
 
+  const [isTopRated, setIsTopRated] = useState(false);
+
   const isOnline = useOnlineStatus();
 
   const LabeledRestaurantCard = DiscountLabel(RestaurantCards);
@@ -67,13 +69,16 @@ const Body = () => {
         <button
           className="px-4 ml-6 border cursor-pointer rounded-md bg-blue-200 items-stretch"
           onClick={() => {
-            const filteredList = filteredRestaurants.filter(
-              (res) => res.info.avgRating > 4.5
-            );
+            setIsTopRated(!isTopRated);
+
+            const filteredList = !isTopRated
+              ? filteredRestaurants.filter((res) => res.info.avgRating > 4.3)
+              : restaurantList;
+
             setFilteredRestaurants(filteredList);
           }}
         >
-          Top Rated Restaurants
+          {isTopRated ? 'All Restaurants' : 'Top Rated Restaurants'}
         </button>
       </div>
       <div className="p-5 flex flex-wrap justify-center">
