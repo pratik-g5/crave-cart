@@ -1,8 +1,15 @@
+import { useDispatch } from 'react-redux';
 import { CDN_URL } from '../utils/constants';
 import InnerRestaurantCategory from './InnerRestaurantCategory';
+import { addItem } from '../utils/cartSlice';
 
 const ItemList = ({ list }) => {
-  // console.log(list);
+  const dispatch = useDispatch();
+
+  const handleAddItem = (item) => {
+    dispatch(addItem(item));
+  };
+
   return (
     <div>
       {list?.itemCards ? (
@@ -31,9 +38,12 @@ const ItemList = ({ list }) => {
                 </p>
               </div>
               <div className="relative">
-                <label className="absolute ml-9  bg-black bg-opacity-80 text-white px-3 mt-24 rounded-md cursor-pointer">
+                <button
+                  className="absolute ml-9  bg-black bg-opacity-80 text-white px-3 mt-24 rounded-md cursor-pointer"
+                  onClick={() => handleAddItem(item)}
+                >
                   Add +
-                </label>
+                </button>
                 {item?.card?.info?.imageId ? (
                   <img
                     className="w-32 h-32 py-2 rounded-lg"

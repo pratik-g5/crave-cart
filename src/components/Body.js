@@ -54,7 +54,7 @@ const Body = () => {
           }}
         />
         <button
-          className="px-3 border-black cursor-pointer rounded-md bg-gray-300"
+          className="px-3 border-black cursor-pointer rounded-xl bg-gray-300 hover:scale-110 hover:border"
           onClick={() => {
             const filteredRestaurants = restaurantList.filter((res) =>
               res.info.name.toLowerCase().includes(searchItem.toLowerCase())
@@ -67,7 +67,7 @@ const Body = () => {
         </button>
 
         <button
-          className="px-4 ml-6 border cursor-pointer rounded-md bg-blue-200 items-stretch"
+          className="px-4 ml-6 border cursor-pointer rounded-xl bg-blue-200 items-stretch hover:scale-110 hover:border-black"
           onClick={() => {
             setIsTopRated(!isTopRated);
 
@@ -78,7 +78,7 @@ const Body = () => {
             setFilteredRestaurants(filteredList);
           }}
         >
-          {isTopRated ? 'All Restaurants' : 'Top Rated Restaurants'}
+          {isTopRated ? 'All Restaurants' : 'Ratings 4.3+'}
         </button>
       </div>
       <div className="p-5 flex flex-wrap justify-center">
