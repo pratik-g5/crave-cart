@@ -1,8 +1,5 @@
-// import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearCart } from '../utils/cartSlice';
-// import InnerItemList from './InnerItemList';
-// import { CDN_URL } from '../utils/constants';
 
 export const Cart = () => {
   const cartItems = useSelector((store) => store.cart.items);

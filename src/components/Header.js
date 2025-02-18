@@ -7,7 +7,6 @@ import { useSelector } from 'react-redux';
 
 const Header = () => {
   const { loggedInUser } = useContext(userContext);
-  // console.log(loggedInUser);
 
   const cart = useSelector((store) => store.cart.items);
   console.log(cart);
@@ -15,7 +14,6 @@ const Header = () => {
   const isOnline = useOnlineStatus();
 
   const [btnName, setBtnName] = useState('login');
-  //rgb(178 255 233
   return (
     <div className="flex justify-between items-center shadow-md border-b-[1px] bg-zinc-200 h-[4.5rem]">
       <div className="">

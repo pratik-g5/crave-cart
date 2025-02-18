@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-router-dom/dist/index.mjs b/node_modules/react-router-dom/dist/index.mjs
+index f953dd9..de11a21 100644
+--- a/node_modules/react-router-dom/dist/index.mjs
++++ b/node_modules/react-router-dom/dist/index.mjs
+@@ -10,7 +10,7 @@
+  */
+ 
+ // index.ts
+-import { HydratedRouter, RouterProvider } from "react-router/dom";
++import { HydratedRouter, RouterProvider } from "react-router";
+ export * from "react-router";
+ export {
+   HydratedRouter,
