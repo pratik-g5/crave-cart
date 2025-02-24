@@ -9,10 +9,10 @@ class UserClass extends React.Component {
     const { name, location, contact } = this?.props;
 
     return (
-      <div id="user-class">
-        <span id="span">Developed By: {name}</span>
-        <span id="span">Location: {location}</span>
-        <span id="span">Contact: {contact}</span>
+      <div className="m-2 p-2 flex flex-col bg-[rgb(141,163,166)]">
+        <span className=" p-2 font-bold">Developed By: {name}</span>
+        <span className=" p-2 font-bold">Location: {location}</span>
+        <span className=" p-2 font-bold">Contact: {contact}</span>
       </div>
     );
   }
