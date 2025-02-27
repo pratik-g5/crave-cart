@@ -8,7 +8,10 @@ const RestaurantCards = (props) => {
 
   // console.log(props);
   return (
-    <div className="m-4 flex flex-wrap w-52 h-72 bg-gray-200 hover:border rounded-md  hover:shadow-2xl overflow-hidden">
+    <div
+      data-testid="resCard"
+      className="m-4 flex flex-wrap w-52 h-72 bg-gray-200 hover:border rounded-md  hover:shadow-2xl overflow-hidden"
+    >
       <Link to={'/restaurants/' + id}>
         <div className="flex flex-col justify-between">
           <img
