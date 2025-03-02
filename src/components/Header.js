@@ -15,8 +15,8 @@ const Header = () => {
 
   const [btnName, setBtnName] = useState('login');
   return (
-    <div className="flex justify-between items-center shadow-md border-b-[1px] bg-zinc-200 h-[4.5rem]">
-      <div className="">
+    <div className="flex justify-between items-center shadow-md border-b-[1px] bg-zinc-200 h-[4.5rem] relative">
+      <div className="absolute left-0">
         <Link to="/">
           <img
             className="w-24 ml-2 p-3 h-auto"
@@ -25,8 +25,8 @@ const Header = () => {
         </Link>
       </div>
 
-      <div className="flex m-2 p-2">
-        <ul className="flex">
+      <div className="flex m-2 p-2 justify-end w-full">
+        <ul className="flex ml-auto">
           <li className="px-4">Online Status: {isOnline ? '🟢' : '🔴'}</li>
           <li className="px-4">
             <Link to="/contact">Contact Us📞</Link>
