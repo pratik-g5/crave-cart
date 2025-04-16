@@ -42,12 +42,12 @@ const Body = () => {
   return restaurantList.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="p-4 m-4">
-      <div className="p-2 ml-20 flex">
+    <div className="p-6 min-h-screen bg-gradient-to-br from-amber-200 via-orange-300 to-rose-400">
+      <div className="p-2 ml-28 flex ">
         <input
           type="text"
           data-testid="searchInput"
-          className=" mr-2 border rounded-sm"
+          className=" mr-2 border rounded-sm pl-2"
           placeholder="Search Restaurants"
           value={searchItem}
           onChange={(e) => {
@@ -55,7 +55,11 @@ const Body = () => {
           }}
         />
         <button
-          className="px-3 border-black cursor-pointer rounded-xl bg-gray-300 hover:scale-110 hover:border"
+          className="px-5 rounded-md
+              bg-teal-600 hover:bg-teal-700 text-white
+               shadow-md
+              border border-teal-700/50
+               focus:ring-teal-400/50 hover:scale-110"
           onClick={() => {
             const filteredRestaurants = restaurantList.filter((res) =>
               res.info.name.toLowerCase().includes(searchItem.toLowerCase())
@@ -68,7 +72,11 @@ const Body = () => {
         </button>
 
         <button
-          className="px-4 ml-6 border cursor-pointer rounded-xl bg-blue-200 items-stretch hover:scale-110 hover:border-black"
+          className="px-5 ml-3 rounded-md py-2
+              bg-zinc-700 hover:bg-zinc-800
+               shadow text-white
+              border border-zinc-600/60
+               focus:ring-zinc-400/30 hover:scale-105"
           onClick={() => {
             setIsTopRated(!isTopRated);
 
