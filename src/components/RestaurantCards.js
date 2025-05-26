@@ -10,7 +10,7 @@ const RestaurantCards = (props) => {
   return (
     <div
       data-testid="resCard"
-      className="m-4 flex flex-wrap w-52 h-72 bg-white rounded-xl overflow-hidden 
+      className="m-4 flex flex-wrap w-52 h-72 bg-slate-300 rounded-xl overflow-hidden 
              transition-all
             border border-orange-100 hover:scale-95"
     >
